@@ -1,0 +1,41 @@
+.header-container{
+    display: flex;
+    height:40vh;
+    background-image: url("./images/header-background.jpg");
+    background-position: center;
+    background-size: cover; 
+    border-radius: 1%;
+ 
+}
+
+.text-container{
+    display: flex;
+    justify-content: right;
+    align-items:center;
+}
+
+.text-container>p{
+    max-height: 100%;
+    width: 50%;
+    word-wrap: break-word;
+    overflow: hidden; 
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+   
+
+}
+
+.lead{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}

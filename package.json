@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Shahar17452312/chef-land#readme",
   "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
     "express": "^4.21.1"
   }
