@@ -1,0 +1,24 @@
+{
+  "name": "chef-land",
+  "version": "1.0.0",
+  "description": "recipes from the whole world",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shahar17452312/chef-land.git"
+  },
+  "author": "Shahar Naim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shahar17452312/chef-land/issues"
+  },
+  "homepage": "https://github.com/Shahar17452312/chef-land#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
