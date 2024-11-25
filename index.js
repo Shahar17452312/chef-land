@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/",(req,res)=>{
-    res.render("index.ejs");
+    res.render("home.ejs");
 });
 
 app.post("/recipe",async (req,res)=>{
@@ -24,11 +24,19 @@ app.post("/recipe",async (req,res)=>{
                 'X-Api-Key':apiKey
             }
         });
-        console.log(reuslt.data[0].ingredients);
+
+        const data=reuslt.data[0];
+
+        res.render("recipe.ejs",{
+            title:data.title,
+            ingredients:data.ingredients,
+            instructions:data.instructions
+        })
     } catch (error) {
         console.log(error.message);
         
     }
+
 
 });
 
