@@ -26,11 +26,15 @@ app.post("/recipe",async (req,res)=>{
         });
 
         const data=reuslt.data[0];
+        var dataIngredients=data.ingredients.split(/[,|.]+/);
+        dataIngredients= dataIngredients.filter(item => item.trim() !== "");
+        var dataInstructions=data.instructions.split(/[,|.]+/);
+        dataInstructions=dataInstructions.filter(item => item.trim() !== "");
 
         res.render("recipe.ejs",{
             title:data.title,
-            ingredients:data.ingredients,
-            instructions:data.instructions
+            ingredients:dataIngredients,
+            instructions:dataInstructions
         })
     } catch (error) {
         console.log(error.message);

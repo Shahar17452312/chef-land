@@ -1,9 +1,46 @@
 <%- include("./partials/header.ejs") %>
-<body>
-    <div class="recipe-container">
-        <h1>dish:<%= title %></h1>
-        <h2>ingredients:<%= ingredients %></h2>
-        <p>instructions:<%=instructions  %></p>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary"><%= title %></h1>
+            <p class="lead text-muted">Whip up something amazing with this step-by-step guide!</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="mb-0">Ingredients</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <% ingredients.forEach(function(ingredient) { %>
+                                <li class="list-group-item">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <%= ingredient %>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">Instructions</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol class="list-group list-group-numbered">
+                            <% instructions.forEach(function(step) { %>
+                                <li class="list-group-item">
+                                    <%= step %>
+                                </li>
+                            <% }); %>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-<%-include("./partials/footer.ejs") %>
+<%- include("./partials/footer.ejs") %>
